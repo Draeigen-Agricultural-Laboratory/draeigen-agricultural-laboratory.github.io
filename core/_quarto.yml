@@ -1,0 +1,113 @@
+# USE THIS FILE TO EDIT YOUR QUARTO CONFIGURATION. A LOT OF FEATURES ARE RELVATIVELY SELF-EVIDENT IN THERE> 
+
+project:
+  type: website
+  resources:
+    - "CNAME"
+
+#execute:
+#  freeze: true
+
+website:
+  title: "Modelling, Theoretical Artificial Intelligence and Learning-theoretic Group (MTAIL)"
+  repo-url: https://github.com/
+  repo-actions: [edit, issue, source]
+  navbar:
+    right:
+      - href: index.qmd
+        text: Central
+      - href: about.qmd
+        text: Information
+      #- href: contents/updates/post.qmd
+      #  text: Research and Updates
+  sidebar:
+    #title: "MTAIL Modelling Documentations. Phase II."
+    #logo: assets/img/shirtpin.png
+    style: "floating"
+    pinned: true
+    collapse-level: 2
+    border: true
+    search: true
+    contents: 
+      - index.qmd
+      - contents/example.qmd
+      # SEE MORE ABOUT THESE CONTEXT AND SPECIFICATION IN QUARTO'S OWN DOCUMENTATION, OR THE LAB's ONE. THE FOLLOWING IS SOME EXAMPLE TAKEN FROM MTAIL. 
+      #- section: "Documentations"
+      #  contents: 
+      #    - contents/research/R0-core-knowledge/R0.Core_Knowledge.qmd
+      #- section: "Literature and Reading"
+      #  contents:
+      #    - contents/reading/library.qmd
+      #    #- contents/reading/R1_1_reading_list.qmd
+      #    #- contents/reading/R1_2_reading_list.qmd
+      #- section: "Research"
+      #  contents:
+      #    - contents/research/research.qmd
+      #    - section: "Double Descent"
+      #      contents: 
+      #        - contents/research/R1-double-descent/R1.1.qmd
+      #        #- contents/research/R1-double-descent/R1.2.qmd
+      #        - section: "Analysis"
+      #          contents:
+      #            - "contents/research/R1-double-descent/contents/R1.O1.qmd"
+      #            - "contents/research/R1-double-descent/contents/R1.O2.qmd"
+      - contents/bibliography.qmd
+    background: "#f0e6e6"
+  page-footer:
+    left: |
+      All content licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) <br> &copy; Bui Gia Khanh.
+    center: "[Website](https://amane-fujimiya.github.io/) | [GitHub](https://github.com/Amane-Fujimiya) | [Blog](https://amane-fujimiya.github.io/blogs) | RHINELAB-RINALAB - Modelling, Theoretical Artificial Intelligence and Learning-theoretic Group"
+    right: Built with [Quarto](https://quarto.org/).
+    background: "#f8f9fa"
+    foreground: "#f0eed3"
+format:
+  html:
+    toc: true
+    lightbox: true
+    theme:
+      light: [default, style/custom.scss, style/sidebar.scss]
+      dark: [default, style/custom_dark.scss, style/sidebar.scss]
+    fontsize: "14px"
+    linestretch: 1.6
+    mainfont: "Roboto"
+    monofont: "Fira Mono"
+    smooth-scroll: true
+    toc-depth: 3
+    code-link: true
+    #code-tools:
+    #  toggle: false
+    code-fold: false
+    highlight-style: printing
+    code-block-bg: true
+    code-overflow: wrap
+    reference-location: margin
+    mermaid:
+      theme: neutral
+    grid: 
+      body-width: 1000px
+      sidebar-width: 250px
+      margin-width: 400px
+      gutter-width: 1.7rem
+
+bibliography: references.bib
+
+latex-auto-install: true
+
+knitr:
+  opts_chunk:
+    cache: true
+    cache.lazy: false
+    dpi: 600
+    fig.width: 5.5
+    fig.height: 3
+    out.width: "100%"
+    split: true
+    R.options:
+      knitr.graphics.auto_pdf: true
+      datatable.print.nrows: 10
+      datatable.print.class: false
+      datatable.print.keys: false
+      datatable.print.trunc.cols: TRUE
+
+
+

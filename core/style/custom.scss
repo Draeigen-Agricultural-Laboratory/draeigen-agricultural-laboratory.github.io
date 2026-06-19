@@ -1,0 +1,109 @@
+/*-- scss:defaults --*/
+
+$sidebar-bg: #e2e2e2;
+$sidebar-fg: #555555;
+$sidebar-hl: #d35400;
+$sidebar-border: true;
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Fira+Mono&display=swap");
+
+// add some spacing between references in biblio list
+div.csl-entry {
+        clear: both;
+        margin-bottom: 10px;
+}
+
+// fix footer.center height
+.nav-footer-center {
+        min-height: 0em !important;
+}
+
+// icons
+.bi-heart-fill {
+        color: darkred;
+}
+
+
+.aa-Autocomplete .aa-Form,
+.aa-DetachedFormContainer .aa-Form {
+        background-color: rgba(223, 220, 220, 0.856) !important;
+}
+
+// $code-block-bg: rgba(192, 192, 192, 0.2);
+// $code-block-border-left: rgb(199, 199, 199);
+$code-color: rgb(71.4,89.25,170.85);
+$link-color: blue;
+$code-bg: rgba(192, 192, 192, 0.2);
+$code-block-bg: rgba(192, 192, 192, 0.16);
+// $code-block-bg: #f8f8f8;
+
+$footer-fg: #666666;
+//$footer-bg: #ffffff;  // optional, only if you also want the footer background
+
+pre code {
+  padding-left: 5%;
+}
+
+pre code.sourceCode {
+  padding-left: 0;
+}
+
+.downlit code a:any-link {
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+}
+
+.sidebar-item {
+  font-size: 0.9rem;
+
+  a {
+    font-size: inherit;
+  }
+}
+
+.sidebar-item .sidebar-item {
+  font-size: 0.85rem;
+}
+
+.sidebar-title {
+  font-size: 0.7rem;
+}
+
+p strong, li strong {
+  color: #ca5404;
+  font-weight: 800;
+}
+
+:root {
+  --teal-italic: #2392a8;
+}
+
+p em, li em {
+  color: var(--teal-italic);
+}
+
+:root {
+  --dr-hue: 180deg;
+  --dr-overlay: 0.06;
+  --accent-orange: #d35400;
+  --accent-teal:   #2C9AB0;
+}
+
+// sidebar
+.sidebar-navigation li a {
+        line-height: 1.75;
+        color: $sidebar-fg;
+        font-size: 14px;
+}
+
+
+
+.sidebar-navigation li a {
+  color: $sidebar-fg;
+}
+
+.sidebar-navigation li a:hover,
+.sidebar-navigation li a.active {
+  color: $sidebar-hl;
+}
