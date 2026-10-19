@@ -1,9 +1,5 @@
 ---
 title: RHINE-WTEMPLATE-3 - Website Template No. 3
-format:
-  html:
-    grid:
-      body-width: 1000px
 ---
 
 ## Specification
@@ -16,8 +12,25 @@ RHINELAB@CAD Central Administration, and maintained by Lab Leader (Bui Gia Khanh
 
 ### Version
 
-v0.1. Not a lot of features added, but have it enough for the time being. 
+#### v0.1. 
 
+Not a lot of features added, but have it enough for the time being. Added most of the functionality and organization. Still missing tables. 
 
+v0.2. 
 
+Added information. Now the format of the website is handled in `rhinelab-html` format. The current configuration is as this: 
+
+```yml
+format:
+  rhinelab-html:
+    number-sections: true
+    number-depth: 3
+    code-link: true
+    code-tools:
+      toggle: true
+    code-fold: false
+    code-overflow: wrap
+    reference-location: margin
+```
+Will add table utilities next time. 
 

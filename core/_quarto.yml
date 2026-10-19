@@ -1,34 +1,48 @@
 # USE THIS FILE TO EDIT YOUR QUARTO CONFIGURATION. A LOT OF FEATURES ARE RELVATIVELY SELF-EVIDENT IN THERE> 
-
 project:
   type: website
+  output-dir: public
   resources:
     - "CNAME"
+    - robots.txt
 
-#execute:
-#  freeze: true
+execute:
+  freeze: auto
 
 website:
-  title: "Modelling, Theoretical Artificial Intelligence and Learning-theoretic Group (MTAIL)"
-  repo-url: https://github.com/
+  title: "RHINELABLOGIT, Webside Template W3"
+  site-url: https://amane-fujimiya.github.io/
+  repo-url: https://github.com/Amane-Fujimiya/
   repo-actions: [edit, issue, source]
+  
+  search:
+    location: sidebar
+    type: textbox
+    limit: 30
+    collapse-after: 3
+    show-item-context: tree
+    copy-button: true
+
   navbar:
     right:
       - href: index.qmd
         text: Central
-      - href: about.qmd
-        text: Information
+      #- href: about.qmd
+      #  text: Information
       #- href: contents/updates/post.qmd
       #  text: Research and Updates
+
   sidebar:
-    #title: "MTAIL Modelling Documentations. Phase II."
-    #logo: assets/img/shirtpin.png
-    style: "floating"
+    style: floating
     pinned: true
     collapse-level: 2
     border: true
     search: true
-    contents: 
+    tools:
+      - icon: house
+        href: https://amane-fujimiya.github.io/
+        text: RHINELAB
+    contents:
       - index.qmd
       - contents/example.qmd
       # SEE MORE ABOUT THESE CONTEXT AND SPECIFICATION IN QUARTO'S OWN DOCUMENTATION, OR THE LAB's ONE. THE FOLLOWING IS SOME EXAMPLE TAKEN FROM MTAIL. 
@@ -52,44 +66,26 @@ website:
       #            - "contents/research/R1-double-descent/contents/R1.O1.qmd"
       #            - "contents/research/R1-double-descent/contents/R1.O2.qmd"
       - contents/bibliography.qmd
-    background: "#f0e6e6"
   page-footer:
     left: |
-      All content licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) <br> &copy; Bui Gia Khanh.
-    center: "[Website](https://amane-fujimiya.github.io/) | [GitHub](https://github.com/Amane-Fujimiya) | [Blog](https://amane-fujimiya.github.io/blogs) | RHINELAB-RINALAB - Modelling, Theoretical Artificial Intelligence and Learning-theoretic Group"
+      All content licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) · &copy; Bui Gia Khanh.
+    center: |
+      [Website](https://amane-fujimiya.github.io/) · [GitHub](https://github.com/Amane-Fujimiya) · [Blog](https://amane-fujimiya.github.io/blogs) · RHINELAB-RINALAB - MTAIL
     right: Built with [Quarto](https://quarto.org/).
-    background: "#f8f9fa"
-    foreground: "#f0eed3"
-format:
-  html:
-    toc: true
-    lightbox: true
-    theme:
-      light: [default, style/custom.scss, style/sidebar.scss]
-      dark: [default, style/custom_dark.scss, style/sidebar.scss]
-    fontsize: "14px"
-    linestretch: 1.6
-    mainfont: "Roboto"
-    monofont: "Fira Mono"
-    smooth-scroll: true
-    toc-depth: 3
-    code-link: true
-    #code-tools:
-    #  toggle: false
-    code-fold: false
-    highlight-style: printing
-    code-block-bg: true
-    code-overflow: wrap
-    reference-location: margin
-    mermaid:
-      theme: neutral
-    grid: 
-      body-width: 1000px
-      sidebar-width: 250px
-      margin-width: 400px
-      gutter-width: 1.7rem
 
 bibliography: references.bib
+date-modified: last-modified
+
+format:
+  rhinelab-html:
+    number-sections: true
+    number-depth: 3
+    code-link: true
+    code-tools:
+      toggle: true
+    code-fold: false
+    code-overflow: wrap
+    reference-location: margin
 
 latex-auto-install: true
 
@@ -108,6 +104,3 @@ knitr:
       datatable.print.class: false
       datatable.print.keys: false
       datatable.print.trunc.cols: TRUE
-
-
-
